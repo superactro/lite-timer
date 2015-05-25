@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Media;
 
 namespace LiteTimer
 {
@@ -14,9 +16,24 @@ namespace LiteTimer
         [STAThread]
         static void Main()
         {
+            CountBack();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            SoundPlayer simpleSound = new SoundPlayer();
+            simpleSound.Play();
         }
+
+        static void CountBack()
+        {
+            TimeSpan date = DateTime.Now.TimeOfDay;
+
+            MessageBox.Show("helloCount");
+
+        }
+
+
     }
 }
