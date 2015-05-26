@@ -16,24 +16,20 @@ namespace LiteTimer
         [STAThread]
         static void Main()
         {
-            CountBack();
-            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LiteTimer());
 
-            SoundPlayer simpleSound = new SoundPlayer();
-            simpleSound.Play();
+            //SoundPlayer simpleSound = new SoundPlayer();
+            //simpleSound.Play();
         }
 
-        static void CountBack()
+        public static void CountBack(int num)
         {
             TimeSpan date = DateTime.Now.TimeOfDay;
+            MessageBox.Show("!!");
 
-            MessageBox.Show("helloCount");
 
         }
-
-
     }
 }
